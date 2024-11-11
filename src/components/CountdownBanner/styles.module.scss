@@ -1,0 +1,25 @@
+@import '@styles/variable.module.scss';
+@import '@styles/mixin.module.scss';
+
+.container {
+    @include flex_box_custom(center, center, 0px);
+    background-image: url('https://xstore.8theme.com/elementor2/marseille04/wp-content/uploads/sites/2/2022/12/photo-of-man-wearing-white-hoodie-5474310.jpeg');
+    height: 409px;
+    width: calc(100% / 2);
+    background-repeat: no-repeat;
+    background-size: cover;
+    flex-direction: column
+}
+
+.containerTimer {
+    @include flex_box_custom(center, center, 10px);
+}
+
+.title {
+    font-size: 28px;
+    color: $four_color;
+}
+
+.boxBtn {
+
+}
