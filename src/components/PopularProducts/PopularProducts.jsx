@@ -1,19 +1,13 @@
-import CountdownTimer from '@components/CountdownTimer/CountdownTimer';
 import MainLayout from '@components/Layout/Layout';
 import styles from './styles.module.scss';
-import CountdownBanner from '@components/CountdownBanner/CountdownBanner';
 import ProductItem from '@components/ProductItem/ProductItem';
 
-function BestProducts({ data }) {
-    const { container, containerItem } = styles;
-    const targetDate = '2025-12-31T00:00:00';
-    console.log(data);
-
+function PopularProducts({ data }) {
+    const { container } = styles;
     return (
-        <MainLayout>
-            <div className={container}>
-                <CountdownBanner />
-                <div className={containerItem}>
+        <>
+            <MainLayout>
+                <div className={container}>
                     {data.map((item) => (
                         <ProductItem
                             key={item.id}
@@ -25,9 +19,9 @@ function BestProducts({ data }) {
                         />
                     ))}
                 </div>
-            </div>
-        </MainLayout>
+            </MainLayout>
+        </>
     );
 }
 
-export default BestProducts;
+export default PopularProducts;
