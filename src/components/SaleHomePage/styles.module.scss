@@ -1,0 +1,42 @@
+@import '@styles/mixin.module.scss';
+@import '@styles/variable.module.scss';
+
+.container {
+    @include flex_box_custom(center, center, 0px);
+    margin-top: 150px;
+}
+
+.boxImage img{
+    width: 100%;
+    height: auto;
+}
+
+.boxContent {
+    @include flex_box_custom(center, center, 30px);
+    margin: 50px;
+    flex-direction: column;
+
+    .title {
+        font-size: 35px;
+        color: $four_color;
+        font-weight: 400;
+        text-align: center;
+        margin: 0;
+    }
+    
+    .des {
+        font-size: 16px;
+        width: 460px;
+        line-height: 25px;
+        color: $thir_color;
+        font-weight: 400;
+        text-align: center;
+        margin: 0
+    }
+    
+    .boxBtn {
+        @include flex_box_custom(center, center, 0px);
+    }
+    
+}
+

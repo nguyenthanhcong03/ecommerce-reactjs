@@ -1,0 +1,10 @@
+@import '@styles/mixin.module.scss';
+@import '@styles/variable.module.scss';
+
+.container {
+    @include flex_box_custom(center, center, 0px);
+    flex-direction: column;
+    margin-top: 100px;
+    background-color: $thir_color;
+    color: $white_color;
+}
