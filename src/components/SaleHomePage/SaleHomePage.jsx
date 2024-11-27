@@ -1,44 +1,10 @@
 import Button from '@components/Button/Button';
 import styles from './styles.module.scss';
-import { useEffect, useRef, useState } from 'react';
+import useTranslateXImage from '@/hooks/useTranslateXImage';
 
 function SaleHomePage() {
     const { container, boxImage, boxContent, title, des, boxBtn } = styles;
-
-    const [scrollDirection, setScrollDirection] = useState(null);
-    const previousScrollPosition = useRef(0);
-
-    const [translateXPosition, setTranslateXPosition] = useState(50);
-    const [scrollPosition, setScrollPosition] = useState(0);
-    const scrollTracking = () => {
-        const currentScrollPosition = window.pageYOffset;
-        if (currentScrollPosition > previousScrollPosition.current) {
-            setScrollDirection('down');
-        } else if (currentScrollPosition < previousScrollPosition.current) {
-            setScrollDirection('up');
-        }
-        previousScrollPosition.current = currentScrollPosition <= 0 ? 0 : currentScrollPosition;
-        setScrollPosition(currentScrollPosition);
-    };
-
-    const handleTranslateX = () => {
-        if (scrollDirection === 'down' && scrollPosition >= 1600) {
-            setTranslateXPosition(translateXPosition <= 0 ? 0 : translateXPosition - 8);
-        } else if (scrollDirection === 'up') {
-            setTranslateXPosition(translateXPosition >= 50 ? 50 : translateXPosition + 8);
-        }
-    };
-
-    useEffect(() => {
-        window.addEventListener('scroll', scrollTracking);
-        return () => {
-            window.removeEventListener('scroll', scrollTracking);
-        };
-    }, []);
-
-    useEffect(() => {
-        handleTranslateX();
-    }, [scrollPosition]);
+    const { translateXPosition } = useTranslateXImage();
 
     return (
         <div className={container}>
@@ -67,7 +33,6 @@ function SaleHomePage() {
                     alt=''
                 />
             </div>
-
         </div>
     );
 }
