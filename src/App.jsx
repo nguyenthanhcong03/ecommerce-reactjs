@@ -1,16 +1,20 @@
-import styles from '@styles/main.module.scss';
-import Header from '@components/Header/Header';
-import MainLayout from '@components/Layout/Layout';
-import MyButton from '@components/Button/Button';
-import Banner from '@components/Banner/Banner';
+import Blog from '@components/Blog/Blog';
 import HomePage from '@components/HomePage/HomePage';
-import Info from '@components/Info/Info';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import routers from '@/routers/routers';
+import { Suspense } from 'react';
 
 function App() {
     return (
-        <>
-            <HomePage />
-        </>
+        <BrowserRouter>
+            <Suspense fallback={<div>Loading...</div>}>
+                <Routes>
+                    {routers.map((item, index) => {
+                        return <Route key={index} path={item.path} element={<item.component />} />;
+                    })}
+                </Routes>
+            </Suspense>
+        </BrowserRouter>
     );
 }
 
