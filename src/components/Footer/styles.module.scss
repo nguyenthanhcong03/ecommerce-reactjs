@@ -2,9 +2,35 @@
 @import '@styles/variable.module.scss';
 
 .container {
-    @include flex_box_custom(center, center, 0px);
+    @include flex_box_custom(center, center, 30px);
     flex-direction: column;
     margin-top: 100px;
-    background-color: $thir_color;
+    background-color: $primary_color;
     color: $white_color;
+    padding: 50px 0;
+
+    .boxLogo {
+        width: 150px;
+        height: auto;
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+    .boxMenu {
+        @include flex_box_custom(center, center, 40px);
+
+        .menuItem {
+            cursor: pointer;
+            &:hover {
+                color: $secondary_color;
+            }
+        }
+    }
+
+    .boxPay {
+        @include flex_box_custom(center, center, 0px);
+
+        flex-direction: column;
+    }
 }
