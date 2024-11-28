@@ -4,20 +4,19 @@
 .container {
     @include flex_box_custom(space-between, center, 0px);
     background-color: $primary_color;
-    margin-top: -75px;
+    margin-top: -60px;
     padding: 20px 55px;
     position: relative;
 }
 
 .containerCard {
-    @include flex_box_custom(center, center, 18px);
-    width: 250px;
-    height: 75px;
+    @include flex_box_custom(start, center, 20px);
+    width: 280px;
     padding: 15px;
 }
 
 .containerContent {
-    @include flex_box_custom(center, flex-start, 12px);
+    @include flex_box_custom(center, flex-start, 10px);
     flex-direction: column;
     color: $white_color;
     .title {

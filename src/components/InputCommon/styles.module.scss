@@ -1,0 +1,30 @@
+@import '@styles/variable.module.scss';
+
+.container {
+    margin-bottom: 15px;
+    .lableInput {
+        font-size: 14px;
+        color: $four_color;
+        margin-bottom: 5px;
+    }
+
+    .boxInput {
+        position: relative;
+        width: 100%;
+        input {
+            box-sizing: border-box;
+            width: 100%;
+            border: 1px solid #e1e1e1;
+            border-radius: 4px;
+            padding: 10px;
+            outline: none;
+        }
+
+        .boxIcon {
+            position: absolute;
+            top: 12px;
+            right: 10px;
+            cursor: pointer;
+        }
+    }
+}
