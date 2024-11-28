@@ -4,6 +4,7 @@
 .container {
     @include flex_box_custom(center, center, 10px);
     flex-direction: column;
+    margin-bottom: 10px;
     cursor: pointer;
 
     .title {

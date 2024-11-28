@@ -1,4 +1,3 @@
-import ProductItem from '@components/ProductItem/ProductItem';
 import HeaderSideBar from '../components/HeaderSideBar/HeaderSideBar';
 import styles from './styles.module.scss';
 import { TfiReload } from 'react-icons/tfi';
