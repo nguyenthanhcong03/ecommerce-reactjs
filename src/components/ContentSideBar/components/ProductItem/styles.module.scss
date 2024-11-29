@@ -15,7 +15,7 @@
     }
 
     .boxContent {
-        @include flex_box_custom(center, flex-start, 15px);
+        @include flex_box_custom(center, flex-start, 5px);
         flex-direction: column;
         flex: 1;
 
@@ -23,6 +23,11 @@
             font-size: 16px;
             color: $primary_color;
             cursor: pointer;
+        }
+
+        .sizeItem {
+            font-size: 14px;
+            color: $secondary_color;
         }
 
         .priceItem {

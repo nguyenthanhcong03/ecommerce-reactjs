@@ -2,5 +2,11 @@
 @import '@styles/variable.module.scss';
 
 .container {
+    @include flex_box_custom(space-between, space-between, 30px);
+    flex-direction: column;
     padding: 30px;
+    height: 100vh;
+
+    .boxContent{
+    }
 }
