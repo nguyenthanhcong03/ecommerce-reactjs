@@ -1,9 +1,6 @@
 import styles from '../styles.module.scss';
-import fbIcon from '@icons/svgs/fbIcon.svg';
-import insIcon from '@icons/svgs/insIcon.svg';
-import ytbIcon from '@icons/svgs/ytbIcon.svg';
 
-function BoxIcon({ type, href }) {
+function BoxIcon({ src, url }) {
     const { boxIcon } = styles;
 
     const handleRenderIcon = (type) => {
@@ -18,9 +15,12 @@ function BoxIcon({ type, href }) {
     };
 
     return (
-        <div className={boxIcon}>
-            <img src={handleRenderIcon(type)} alt={type} />
-        </div>
+        // <div className={boxIcon}>
+        //     <img src={handleRenderIcon(type)} alt={type} href={href} />
+        // </div>
+        <a href={url} target='_blank' rel='noopener noreferrer' className={boxIcon}>
+            <img src={src} />
+        </a>
     );
 }
 

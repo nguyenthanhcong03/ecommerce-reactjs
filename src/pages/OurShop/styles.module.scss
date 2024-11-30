@@ -1,0 +1,23 @@
+@import '@styles/variable.module.scss';
+
+.breadcrumbContainer {
+    display: flex;
+    justify-content: space-between;
+    margin: 93px 0 10px 0;
+    font-size: 14px;
+    
+    .breadcrumbItem {
+        display: inline-block;
+        color: $secondary_color;
+        cursor: pointer;
+    }
+
+    span {
+        color: $secondary_color;
+    }
+}
+
+.bannerContainer {
+    width: 100%;
+    height: 280px;
+}

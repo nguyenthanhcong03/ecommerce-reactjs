@@ -3,17 +3,18 @@ import MainLayout from '@components/Layout/Layout';
 import styles from './styles.module.scss';
 import CountdownBanner from '@components/CountdownBanner/CountdownBanner';
 import ProductItem from '@components/ProductItem/ProductItem';
+import countdownBanner1 from '@images/countdownBanner1.jpeg';
 
 function BestProducts({ data }) {
-    const { container, containerItem } = styles;
-    const targetDate = '2025-12-31T00:00:00';
-    console.log(data);
+    const { container, itemContainer, bannerContainer } = styles;
 
     return (
         <MainLayout>
             <div className={container}>
-                <CountdownBanner />
-                <div className={containerItem}>
+                <div className={bannerContainer}>
+                    <CountdownBanner backgroundImage={countdownBanner1} />
+                </div>
+                <div className={itemContainer}>
                     {data.map((item) => (
                         <ProductItem
                             key={item.id}

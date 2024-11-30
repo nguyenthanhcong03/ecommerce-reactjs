@@ -1,0 +1,39 @@
+@import '@styles/mixin.module.scss';
+@import '@styles/variable.module.scss';
+
+.filterContainer {
+    @include flex_box_custom(space-between, center, 0px);
+    margin: 18px 0;
+    font-size: 14px;
+    .filterBox {
+        @include flex_box_custom(center, center, 18px);
+        display: flex;
+        align-items: center;
+
+        .iconBox {
+            @include flex_box_custom(center, center, 15px);
+        }
+
+        .selectBox {
+            border: 1px solid #e1e1e1;
+            padding: 5px;
+            color: $secondary_color;
+            outline: none;
+            cursor: pointer;
+
+            &.sort{
+                width: 275px;
+            }
+
+            &.show {
+                width: 83px;
+            }
+        }
+
+        span {
+            color: $thir_color;
+        }
+
+
+    }
+}

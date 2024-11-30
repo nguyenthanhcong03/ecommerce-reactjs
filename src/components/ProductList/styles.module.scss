@@ -1,0 +1,6 @@
+@import '@styles/mixin.module.scss';
+
+.productContainer {
+    @include flex_box_custom(space-between, center, 10px);
+    flex-wrap: wrap;
+}

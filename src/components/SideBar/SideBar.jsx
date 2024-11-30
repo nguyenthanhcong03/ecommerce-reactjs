@@ -1,6 +1,6 @@
 import classNames from 'classnames';
 import styles from './styles.module.scss';
-import { SideBarContext } from '@/contexts/SideBarProvider';
+import { SideBarContext } from '@contexts/SideBarProvider';
 import { useContext } from 'react';
 import { TfiClose } from 'react-icons/tfi';
 import Login from '@components/ContentSideBar/Login/Login';

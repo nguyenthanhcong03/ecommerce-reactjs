@@ -4,8 +4,13 @@
 .container {
     @include flex_box_custom(space-between, center, 10px);
     margin-top: 40px;
-}
 
-.containerItem {
-    @include flex_box_custom(center, center, 10px);
+    .bannerContainer {
+        width: calc(100% / 2);
+        height: 409px;
+    }
+
+    .itemContainer {
+        @include flex_box_custom(center, center, 10px);
+    }
 }
